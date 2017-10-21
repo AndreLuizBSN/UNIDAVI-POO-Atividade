@@ -1,6 +1,6 @@
 package br.edu.unidavi.webdev.poo.basics;
 
-public class Jogo {
+public class Jogo extends GameBase{
 	
 	private boolean gotcha = false;
 	private int wrongs = 0;
@@ -13,7 +13,7 @@ public class Jogo {
 		this.passe = passe;
 	}
 	
-	
+	@Override
 	public void jogada(char[] placeholder, String attempt){
 		boolean hit = false;
 		this.gotcha = true;
@@ -31,10 +31,11 @@ public class Jogo {
 		this.canPlay = this.wrongs < limit && !gotcha;
 	}
 	
+	@Override
 	public int getWrongs(){
 		return this.wrongs;
 	}
-	
+	@Override
 	public int getLimit(){
 		return this.limit;
 	}
@@ -42,14 +43,12 @@ public class Jogo {
 	public String getPlaceholderAsString(){
 		return this.placeholderAsString;
 	}
-	
+	@Override
 	public boolean isCanPlay(){
 		return this.canPlay;
 	}
-	
+	@Override
 	public boolean isGotcha(){
 		return this.gotcha;
 	}
-	
-
 }
