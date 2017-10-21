@@ -2,8 +2,17 @@ package calc;
 
 
 public class Calculadora {
+	
+	public static void calcularOperacao(Calcular c, int a, int b){
+		System.out.println("Pol: "+c.exec(a, b));
+	}
 
 	public static void main(String[] args) {
+		calcularOperacao(new CalcularSomar(), 1, 2);
+		calcularOperacao(new CalcularSubtrair(), 3, 2);
+		calcularOperacao(new CalcularDividir(), 5, 2);
+		calcularOperacao(new CalcularMultiplicar(), 2, 2);
+		
 		int soma = new Operacao(1, 3).soma();
 		System.out.println(soma);
 		int sub = new Operacao(3, 3).subtrai();
