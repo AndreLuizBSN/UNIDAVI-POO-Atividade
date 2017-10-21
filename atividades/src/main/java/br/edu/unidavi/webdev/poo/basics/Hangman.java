@@ -10,7 +10,7 @@ public class Hangman {
 	
 	public static void init(){
 		Passe passe = new Passe("Ghost");
-		char[] placeholder = passe.initPlaceholder();
+		Character[] placeholder = passe.initPlaceholder();
 		Jogo jogo = new Jogo(passe);
 		
 		

@@ -8,8 +8,8 @@ public class Passe {
 		this.pass = pass;
 	}
 	
-	public char[] initPlaceholder(){
-		char[] placeholder = new char[this.pass.length()];
+	public Character[] initPlaceholder(){
+		Character[] placeholder = new Character[this.pass.length()];
 		for (int i = 0; i < this.pass.length(); i++)
 			placeholder[i] = '*';
 	

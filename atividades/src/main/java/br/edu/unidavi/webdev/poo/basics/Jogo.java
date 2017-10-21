@@ -1,6 +1,6 @@
 package br.edu.unidavi.webdev.poo.basics;
 
-public class Jogo extends GameBase{
+public class Jogo extends GameBase<Character, String>{
 	
 	private boolean gotcha = false;
 	private int wrongs = 0;
@@ -14,7 +14,7 @@ public class Jogo extends GameBase{
 	}
 	
 	@Override
-	public void jogada(char[] placeholder, String attempt){
+	public void jogada(Character[] placeholder, String attempt){
 		boolean hit = false;
 		this.gotcha = true;
 		this.placeholderAsString = "";
