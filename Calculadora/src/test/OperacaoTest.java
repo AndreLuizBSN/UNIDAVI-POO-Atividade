@@ -2,6 +2,8 @@ package test;
 
 import static org.junit.Assert.*;
 
+import java.math.BigDecimal;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -27,7 +29,7 @@ public class OperacaoTest {
 	public void testDivide() {
 		Operacao op = new Operacao(3,2);
 		double nr = op.divide();
-		Assert.assertSame(1.5, nr);
+		Assert.assertEquals(1.5, nr, 0);
 	}
 
 	@Test
@@ -35,6 +37,13 @@ public class OperacaoTest {
 		Operacao op = new Operacao(3,2);
 		int soma = op.subtrai();
 		Assert.assertEquals(1, soma);
+	}
+	
+	@Test
+	public void testSubtrai2() {
+		BigDecimal b = new BigDecimal("2");
+		BigDecimal c = new BigDecimal("3");
+		Assert.assertEquals(b,c);
 	}
 	
 

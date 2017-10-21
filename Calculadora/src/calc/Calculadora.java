@@ -33,6 +33,8 @@ public class Calculadora {
 		System.out.println("x1 : "+x1);
 		System.out.println("x2 : "+x2);
 		
+		System.out.println(0.1+0.2);
+		
 	}
 
 }
